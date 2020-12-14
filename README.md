@@ -18,7 +18,7 @@
     <li> React context API</li>
     <li> React styled components</li>
     <li> React Fusion charts</li>
-    <li> React oAuht</li>
+    <li> React AuhtO</li>
     <li> Github API</li>
  </ul>
 
