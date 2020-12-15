@@ -22,7 +22,7 @@ const Card = () => {
         <img src={avatar_url} alt={name} />
         <div>
           <h4>{name}</h4>
-          <p>{twitter(twitter_username)}</p>
+          {twitter(twitter_username)}
         </div>
         <a href={html_url}>follow</a>
       </header>
