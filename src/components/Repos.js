@@ -56,14 +56,19 @@ const Repos = () => {
 
   stars = Object.values(stars).slice(-5).reverse()
   forks = Object.values(forks).slice(-5).reverse()
+
+  const totalStars = mostPopular.reduce((total, item) => {
+    total += item.stars
+    return total
+  }, 0)
+
   return (
     <section className="section">
       <Wrapper className="section-center">
-        {/* <ExampleChart data={chartData} /> */}
-        <Pie3D data={mostUsed} />
-        <Column3D data={stars} />
-        <Doughnut2D data={mostPopular} />
-        <Bar3D data={forks} />
+        {mostUsed.length > 0 && <Pie3D data={mostUsed} />}
+        {stars.length > 0 && <Column3D data={stars} />}
+        {totalStars > 0 && <Doughnut2D data={mostPopular} />}
+        {forks.length > 0 && <Bar3D data={forks} />}
       </Wrapper>
     </section>
   )
